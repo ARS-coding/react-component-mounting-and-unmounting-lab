@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Pancake from './Pancake';
 
-class Game extends React.Component {
+class Game extends Component {
 
   constructor(props) {
     super(props);
@@ -18,6 +18,10 @@ class Game extends React.Component {
 
   // TODO: create a componentDidMount() which will set the current time
   
+  componentDidMount() {
+    this.setCurrentTime()
+  }
+
   setCurrentTime = () => {
     this.setState({ time: new Date(Date.now())});
   }
